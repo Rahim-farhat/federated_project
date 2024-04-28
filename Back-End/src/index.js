@@ -9,6 +9,15 @@ import { opportunitiesRouter } from './routes/opportunities.js';
 
 const app = express();
 app.use(express.json());
+const __dirname = path.resolve();
+app.use(express.static(path.join(__dirname, '/Front-End/dist')));
+app.get('*', (req, res) =>
+  res.sendFile(path.join(__dirname, '/Front-End/dist/index.html'))
+);
+
+app.use((err, req, res, next) => {
+  res.status(500).send({ message: err.message });
+});
 app.use(cors());
 
 app.use('/auth', userRouter);
