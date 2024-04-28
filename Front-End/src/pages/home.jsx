@@ -12,7 +12,9 @@ export const Home = () => {
   useEffect(() => {
     const fetchOpportunities = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/opportunities');
+        const response = await axios.get(
+          'https://federated-project.onrender.com/opportunities'
+        );
         setOpportunities(response.data);
       } catch (err) {
         console.log(err);
@@ -25,7 +27,7 @@ export const Home = () => {
       try {
         console.log('trying to fetch opps');
         const response = await axios.get(
-          `http://localhost:5000/opportunities/savedOpportunities/ids/${userID}`
+          `https://federated-project.onrender.com/opportunities/savedOpportunities/ids/${userID}`
         );
 
         setSavedOpportunities(response.data.savedOpp);
@@ -40,10 +42,13 @@ export const Home = () => {
 
   const saveOpportunity = async (opportunityID) => {
     try {
-      const response = await axios.put('http://localhost:5000/opportunities', {
-        opportunityID,
-        userID,
-      });
+      const response = await axios.put(
+        'https://federated-project.onrender.com/opportunities',
+        {
+          opportunityID,
+          userID,
+        }
+      );
 
       console.log({
         opportunityID,
