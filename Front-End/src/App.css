@@ -1,0 +1,252 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: hsl(211, 77%, 78%);
+  font-family: sans-serif;
+
+  background-color: #e5e5f7;
+  opacity: 0.4;
+  background-image: linear-gradient(
+      30deg,
+      #92afd7 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #92afd7 87.5%,
+      #92afd7
+    ),
+    linear-gradient(
+      150deg,
+      #92afd7 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #92afd7 87.5%,
+      #92afd7
+    ),
+    linear-gradient(
+      30deg,
+      #92afd7 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #92afd7 87.5%,
+      #92afd7
+    ),
+    linear-gradient(
+      150deg,
+      #92afd7 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #92afd7 87.5%,
+      #92afd7
+    ),
+    linear-gradient(
+      60deg,
+      #92afd777 25%,
+      transparent 25.5%,
+      transparent 75%,
+      #92afd777 75%,
+      #92afd777
+    ),
+    linear-gradient(
+      60deg,
+      #92afd777 25%,
+      transparent 25.5%,
+      transparent 75%,
+      #92afd777 75%,
+      #92afd777
+    );
+  background-size: 48px 84px;
+  background-position: 0 0, 0 0, 24px 42px, 24px 42px, 0 0, 24px 42px;
+  opacity: 100%;
+}
+
+.navbar {
+  background-color: #333; /* Background color */
+  overflow: hidden; /* Ensure that child elements do not overflow */
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.navbar a {
+  float: left; /* Float the links to the left */
+  display: block; /* Make links block elements */
+  color: white; /* Text color */
+  text-align: center; /* Center-align text */
+  padding: 14px 16px; /* Padding for the links */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.navbar a:hover {
+  background-color: #ddd; /* Background color on hover */
+  color: black; /* Text color on hover */
+}
+
+.navbar .active {
+  background-color: #4caf50; /* Background color for active link */
+}
+/*create */
+.opportunity-recipe {
+  width: 400px;
+  margin: 0 auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input[type='text'],
+textarea {
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+/*home*/
+.opportunity-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.opportunity-item {
+  list-style: none;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.opportunity-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.opportunity-details h2 {
+  margin: 0;
+}
+
+.opportunity-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin-top: 10px;
+}
+
+.save-button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.save-button.saved {
+  background-color: #28a745;
+}
+
+.save-button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+/*email*/
+.email-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.email-button:hover {
+  background-color: #0056b3;
+}
+
+.auth-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type='text'],
+input[type='password'] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type='submit'] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type='submit']:hover {
+  background-color: #0056b3;
+}
+
+.auth {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.part {
+  padding: 10%;
+  background-color: #eeeef5;
+}
