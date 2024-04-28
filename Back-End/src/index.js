@@ -36,11 +36,11 @@ const connectDB = async () => {
     console.error('Error connecting to MongoDB:', error.message);
   }
 };
-
+/*
 app.use((req, res, next) => {
   res.setHeader('Content-Security-Policy', "default-src 'self'; img-src *");
   next();
-});
+});*/
 connectDB();
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
