@@ -12,6 +12,15 @@ const app = express();
 // Enable CORS middleware
 app.use(cors());
 
+// Content Security Policy middleware
+app.use((req, res, next) => {
+  res.setHeader(
+    'Content-Security-Policy',
+    "default-src 'none'; img-src 'self' data:;"
+  );
+  next();
+});
+
 app.use(express.json());
 
 app.use((err, req, res, next) => {
