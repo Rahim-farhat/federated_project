@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import path from 'path';
 dotenv.config();
 
 import { userRouter } from './routes/users.js';
@@ -29,6 +30,14 @@ app.use((err, req, res, next) => {
 
 app.use('/auth', userRouter);
 app.use('/opportunities', opportunitiesRouter);
+
+const __dirname = path.resolve();
+app.use(express.static(path.join(__dirname, '/Front-End/dist')));
+
+// Handle all other routes with a wildcard (*) to serve the frontend application
+app.get('*', (req, res) =>
+  res.sendFile(path.join(__dirname, '/Front-End/dist/index.html'))
+);
 
 const connectDB = async () => {
   try {
