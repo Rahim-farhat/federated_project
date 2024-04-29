@@ -10,7 +10,7 @@ export const SavedOpp = () => {
     const fetchSavedOpportunities = async () => {
       try {
         const response = await axios.get(
-          `https://federated-project.onrender.com/opportunities/savedOpportunities/${userID}`
+          `http://localhost:5000/opportunities/savedOpportunities/${userID}`
         );
         setSavedOpportunities(response.data.savedOpp);
       } catch (err) {

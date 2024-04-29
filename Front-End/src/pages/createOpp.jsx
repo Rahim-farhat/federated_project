@@ -27,7 +27,7 @@ export const CreateOpp = () => {
     event.preventDefault();
     try {
       await axios.post(
-        'https://federated-project.onrender.com/opportunities',
+        'http://localhost:5000/opportunities',
         { ...opportunity },
         {
           headers: { authorization: cookies.access_token },

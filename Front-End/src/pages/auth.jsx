@@ -28,13 +28,10 @@ const Login = () => {
   const onSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post(
-        'https://federated-project.onrender.com/auth/login',
-        {
-          username,
-          password,
-        }
-      );
+      const response = await axios.post('http://localhost:5000/auth/login', {
+        username,
+        password,
+      });
 
       setCookies('access_token', response.data.token);
       window.localStorage.setItem('userID', response.data.userID);
@@ -65,7 +62,7 @@ const Register = () => {
     event.preventDefault();
     try {
       console.log('mzl');
-      await axios.post('https://federated-project.onrender.com/auth/register', {
+      await axios.post('http://localhost:5000/auth/register', {
         username,
         password,
       });
