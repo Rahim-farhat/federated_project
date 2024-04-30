@@ -10,7 +10,10 @@ import { opportunitiesRouter } from './routes/opportunities.js';
 
 const app = express();
 app.use(express.json());
+app.use(cors());
+app.use('/auth', userRouter);
 
+app.use('/opportunities', opportunitiesRouter);
 const __dirname = path.resolve();
 app.use(express.static(path.join(__dirname, '/Front-End/dist')));
 app.get('*', (req, res) =>
@@ -20,11 +23,7 @@ app.get('*', (req, res) =>
 app.use((err, req, res, next) => {
   res.status(500).send({ message: err.message });
 });
-app.use(cors());
 
-app.use('/auth', userRouter);
-
-app.use('/opportunities', opportunitiesRouter);
 /*
 app.listen(5000, () => console.log('Server t7al'));
 */
