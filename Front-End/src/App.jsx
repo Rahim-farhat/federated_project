@@ -3,6 +3,7 @@ import { Home } from './pages/home';
 import { CreateOpp } from './pages/createOpp';
 import { Auth } from './pages/auth';
 import { SavedOpp } from './pages/savedOpp';
+import { AboutUs } from './pages/aboutus';
 import { Navbar } from './components/navbar';
 import './App.css';
 function App() {
@@ -11,7 +12,8 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />}></Route>
+          <Route path="/" element={<AboutUs />}></Route>
+          <Route path="/home" element={<Home />}></Route>
           <Route path="/auth" element={<Auth />}></Route>
           <Route path="/createOpp" element={<CreateOpp />}></Route>
           <Route path="/savedOpp" element={<SavedOpp />}></Route>

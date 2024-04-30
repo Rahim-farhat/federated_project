@@ -71,7 +71,6 @@ export const Home = () => {
 
   return (
     <div className="opportunity-list">
-      <h1>Opportunities</h1>
       {loading ? (
         <LoadingBox />
       ) : (
@@ -97,22 +96,22 @@ export const Home = () => {
               />
               <div>
                 {opportunity.duration && (
-                  <p>
+                  <p className="opportunity-thing">
                     <strong>Duration:</strong> {opportunity.duration}
                   </p>
                 )}
                 {opportunity.role && (
-                  <p>
+                  <p className="opportunity-thing">
                     <strong>Role:</strong> {opportunity.role}
                   </p>
                 )}
                 {opportunity.companyName && (
-                  <p>
+                  <p className="opportunity-thing">
                     <strong>Company:</strong> {opportunity.companyName}
                   </p>
                 )}
                 {opportunity.details && (
-                  <p>
+                  <p className="opportunity-thing">
                     <strong>Details:</strong> {opportunity.details}
                   </p>
                 )}

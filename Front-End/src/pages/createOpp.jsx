@@ -43,7 +43,6 @@ export const CreateOpp = () => {
   console.log(opportunity);
   return (
     <div className="opportunity-recipe">
-      <h2>Create opportunity</h2>
       <form onSubmit={handleSubmit}>
         <label htmlFor="oppname">Name</label>
         <input

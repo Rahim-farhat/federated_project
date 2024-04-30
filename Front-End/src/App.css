@@ -1,5 +1,4 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
   text-align: center;
 }
@@ -8,87 +7,54 @@ body {
   padding: 0;
   background-color: hsl(211, 77%, 78%);
   font-family: sans-serif;
+  --s: 65px; /* control the size */
+  --c1: #dadee1;
+  --c2: #4a99b4;
+  --c3: #9cceb5;
 
-  background-color: #e5e5f7;
-  opacity: 0.4;
-  background-image: linear-gradient(
-      30deg,
-      #92afd7 12%,
-      transparent 12.5%,
-      transparent 87%,
-      #92afd7 87.5%,
-      #92afd7
-    ),
-    linear-gradient(
-      150deg,
-      #92afd7 12%,
-      transparent 12.5%,
-      transparent 87%,
-      #92afd7 87.5%,
-      #92afd7
-    ),
-    linear-gradient(
-      30deg,
-      #92afd7 12%,
-      transparent 12.5%,
-      transparent 87%,
-      #92afd7 87.5%,
-      #92afd7
-    ),
-    linear-gradient(
-      150deg,
-      #92afd7 12%,
-      transparent 12.5%,
-      transparent 87%,
-      #92afd7 87.5%,
-      #92afd7
-    ),
-    linear-gradient(
-      60deg,
-      #92afd777 25%,
-      transparent 25.5%,
-      transparent 75%,
-      #92afd777 75%,
-      #92afd777
-    ),
-    linear-gradient(
-      60deg,
-      #92afd777 25%,
-      transparent 25.5%,
-      transparent 75%,
-      #92afd777 75%,
-      #92afd777
+  --_c: 75%, var(--c3) 52.72deg, #0000 0;
+  --_g1: conic-gradient(from -116.36deg at 25% var(--_c));
+  --_g2: conic-gradient(from 63.43deg at 75% var(--_c));
+  background: var(--_g1), var(--_g1) calc(3 * var(--s)) calc(var(--s) / 2),
+    var(--_g2), var(--_g2) calc(3 * var(--s)) calc(var(--s) / 2),
+    conic-gradient(
+      var(--c2) 63.43deg,
+      var(--c1) 0 116.36deg,
+      var(--c2) 0 180deg,
+      var(--c1) 0 243.43deg,
+      var(--c2) 0 296.15deg,
+      var(--c1) 0
     );
-  background-size: 48px 84px;
-  background-position: 0 0, 0 0, 24px 42px, 24px 42px, 0 0, 24px 42px;
-  opacity: 100%;
+  background-size: calc(2 * var(--s)) var(--s);
 }
 
+/*
 .navbar {
-  background-color: #333; /* Background color */
-  overflow: hidden; /* Ensure that child elements do not overflow */
+  background-color: #333; 
+  overflow: hidden;  Ensure that child elements do not overflow 
   display: flex;
   justify-content: space-around;
   padding: 10px;
 }
 
 .navbar a {
-  float: left; /* Float the links to the left */
-  display: block; /* Make links block elements */
-  color: white; /* Text color */
-  text-align: center; /* Center-align text */
-  padding: 14px 16px; /* Padding for the links */
-  text-decoration: none; /* Remove underline from links */
+  float: left; 
+  display: block; 
+  color: white; 
+  text-align: center; 
+  padding: 14px 16px; 
+  text-decoration: none; 
 }
 
 .navbar a:hover {
-  background-color: #ddd; /* Background color on hover */
-  color: black; /* Text color on hover */
+  background-color: #ddd; 
+  color: black; 
 }
 
 .navbar .active {
-  background-color: #4caf50; /* Background color for active link */
+  background-color: #4caf50; 
 }
+*/
 /*create */
 .opportunity-recipe {
   width: 400px;
@@ -114,7 +80,7 @@ textarea {
 
 button {
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #1f242d;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -122,12 +88,14 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #042141;
 }
 /*home*/
 .opportunity-list {
   max-width: 800px;
   margin: 0 auto;
+  margin-top: 5px;
+  padding: 20px;
 }
 
 .opportunity-item {
@@ -136,7 +104,7 @@ button:hover {
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 8px;
-  background-color: #f9f9f9;
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .opportunity-details {
@@ -149,6 +117,12 @@ button:hover {
   margin: 0;
 }
 
+.opportunity-thing {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
 .opportunity-image {
   width: 100%;
   max-width: 300px;
@@ -158,8 +132,8 @@ button:hover {
 
 .save-button {
   padding: 8px 16px;
-  background-color: #007bff;
-  color: #fff;
+  background-color: #60f4a7;
+  color: black;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -170,7 +144,7 @@ button:hover {
 }
 
 .save-button:disabled {
-  background-color: #6c757d;
+  background-color: #898f93;
   cursor: not-allowed;
 }
 
@@ -178,7 +152,7 @@ button:hover {
 .email-button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #0ce529;
   color: #fff;
   text-decoration: none;
   border: none;
@@ -196,6 +170,8 @@ button:hover {
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  background-color: #c3e8f5;
+  padding: 10px;
 }
 
 .auth-container form {
@@ -229,7 +205,7 @@ button[type='submit'] {
   width: 100%;
   padding: 10px;
   font-size: 16px;
-  background-color: #007bff;
+  background-color: #373a3d;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -248,5 +224,232 @@ button[type='submit']:hover {
 
 .part {
   padding: 10%;
-  background-color: #eeeef5;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/*navabar and shit*/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.navbar input[type='checkbox'],
+.navbar .hamburger-lines {
+  display: none;
+}
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+}
+
+.navbar {
+  box-shadow: 0px 5px 10px 0px #aaa;
+  position: float;
+  width: 100vw;
+  background: #d8dfe3;
+  color: #000;
+  z-index: 100;
+  margin: 0 auto;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+  align-items: center;
+}
+
+.menu-items {
+  order: 2;
+  display: flex;
+  justify-content: space-around;
+}
+.logo {
+  order: 1;
+  font-size: 2.3rem;
+}
+
+.link {
+  list-style: none;
+  margin-left: 1.5rem;
+  font-size: 1.3rem;
+  margin: 10px;
+}
+
+.navbar a {
+  color: #353535;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+  color: #27b195;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    opacity: 0.95;
+  }
+
+  .navbar-container input[type='checkbox'],
+  .navbar-container .hamburger-lines {
+    display: block;
+  }
+
+  .navbar-container {
+    display: block;
+    position: relative;
+    height: 64px;
+  }
+
+  .navbar-container input[type='checkbox'] {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 30px;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .navbar-container .hamburger-lines {
+    display: block;
+    height: 28px;
+    width: 35px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .navbar-container .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #333;
+  }
+
+  .navbar-container .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .navbar-container .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .navbar-container .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .navbar .menu-items {
+    padding-top: 100px;
+    background: #fff;
+    height: 100vh;
+    max-width: 300px;
+    transform: translate(-150%);
+    display: flex;
+    flex-direction: column;
+    margin-left: -40px;
+    padding-left: 40px;
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 5px 0px 10px 0px #aaa;
+    overflow: scroll;
+  }
+
+  .navbar .menu-items .link {
+    margin-bottom: 1.8rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  .logo {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2rem;
+  }
+
+  .navbar-container input[type='checkbox']:checked ~ .menu-items {
+    transform: translateX(0);
+  }
+
+  .navbar-container input[type='checkbox']:checked ~ .hamburger-lines .line1 {
+    transform: rotate(45deg);
+  }
+
+  .navbar-container input[type='checkbox']:checked ~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+  }
+
+  .navbar-container input[type='checkbox']:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-45deg);
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar-container input[type='checkbox']:checked ~ .logo {
+    display: none;
+  }
+}
+
+/*i dont know*/
+
+.about-us-panel {
+  width: 70%;
+  margin: 15px auto;
+  /* Panel background color */
+  border-radius: 10px; /* Rounded edges */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  overflow: hidden; /* Prevent content from overflowing */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Arrange items vertically */
+  justify-content: space-between;
+  padding: 20px; /* Padding around content */
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.about-us-panel img {
+  width: 100%; /* Image width fills the container */
+  max-width: 500px; /* Set maximum image width */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 20px; /* Spacing below image */
+  opacity: 1;
+  padding: 0;
+  margin: 0;
+}
+
+.about-us-content {
+  flex: 1; /* Grow to fill remaining space */
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-us-content h2 {
+  font-size: 40px; /* Heading font size */
+  margin-bottom: 10px; /* Spacing below heading */
+}
+
+.about-us-content p {
+  font-size: 16px; /* Paragraph font size */
+  color: #666666; /* Text color */
 }

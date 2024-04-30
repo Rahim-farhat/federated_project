@@ -22,8 +22,7 @@ export const SavedOpp = () => {
   }); // Dependency array added to useEffect
 
   return (
-    <div>
-      <h1>Saved Opportunities</h1>
+    <div className="opportunity-list">
       <ul>
         {savedOpportunities.length > 0 ? (
           savedOpportunities.map((opportunity) => (
